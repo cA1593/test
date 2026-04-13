@@ -84,11 +84,12 @@ Open Docker Desktop from the Start menu and wait for it to fully load (whale ico
 
 Once the app is running, open the following in your browser:
 
-**Interface**                     **URL**
-Main App                          http://localhost:5119
-Swagger (API testing)             http://localhost:5119/swagger
-SignalR Test Page                 http://localhost:5119/signalr-test.html
-RabbitMQ Dashboard                http://127.0.0.1:15672
+| Interface              | URL                              |
+|-----------------------|----------------------------------|
+| Main App              | http://localhost:5119            |
+| Swagger (API testing) | http://localhost:5119/swagger    |
+| SignalR Test Page     | http://localhost:5119/signalr-test.html |
+| RabbitMQ Dashboard    | http://127.0.0.1:15672           |
 
 **!** You won't be able to log in yet — demo data must be loaded first (Step 7).
 
@@ -120,10 +121,11 @@ The script will populate the database with:
 **Step 8 — Log In and Test**
 Go to _http://localhost:5119_ and click Login. Use these credentials:
 
-**Role**        **Email**                     **Password**
-Admin           admin@college.ie              Admin123!
-Lecturer        lecturertest@college.ie       Lecturer.123
-Student         studenttest@college.ie        Student.123
+| Role     | Email                     | Password     |
+|----------|--------------------------|--------------|
+| Admin    | admin@college.ie         | Admin123!    |
+| Lecturer | lecturertest@college.ie  | Lecturer.123 |
+| Student  | studenttest@college.ie   | Student.123  |
 
 **Important — Blazor UI (Frontend)**
 The frontend interface at _http://localhost:5119_ is a basic Blazor UI used only for testing user login with the three roles.
