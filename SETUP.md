@@ -168,14 +168,14 @@ The Blazor UI does not expose the full system features and should not be used to
   * App fails to build with a Pages namespace error Identity pages are missing. **Repeat Step 5**.
   * Unable to connect to web server 'https' Run these commands to fix the SSL certificate:
         
-        - _dotnet dev-certs https --clean_
+        - dotnet dev-certs https --clean
         
-        - _dotnet dev-certs https --trust_
+        - dotnet dev-certs https --trust
         
   * Or switch to the http profile in Visual Studio instead of https.
   * RabbitMQ not connecting / Bus not started Make sure Docker Desktop is open and run:
         
-        - _docker start rabbitmq_
+        - docker start rabbitmq
         
   * Database not found in SSMS dropdown The app must run at least once before the database is created. Run dotnet run first, then load the demo data.
 
