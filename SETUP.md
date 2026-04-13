@@ -31,15 +31,15 @@ Make sure the following are installed before continuing:
 
 * Open the Windows terminal (Command Prompt) and navigate to the folder where you want to place the project:
     
-    _cd C:\Users\YourName\source\repos_
+   - cd C:\Users\YourName\source\repos
 
 * Clone the repository:
     
-    _git clone https://github.com/Antonioluis74476/CollegeScheduler.git CollegeScheduler_
+   - git clone https://github.com/Antonioluis74476/CollegeScheduler.git CollegeScheduler
 
 * Navigate into the project folder:
     
-    _cd CollegeScheduler\CollegeScheduler_
+   - cd CollegeScheduler\CollegeScheduler
   
 **Step 3 — Start RabbitMQ**
 
@@ -47,17 +47,17 @@ Open Docker Desktop from the Start menu and wait for it to fully load (whale ico
 
 * If this is your first time running it, use this command:
     
-    _docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3-management_
+  - docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3-management
 
 * Then run in the terminal:
     
-    _docker start rabbitmq_
+  - docker start rabbitmq
   
 **!****!** Verify RabbitMQ is running by opening http://127.0.0.1:15672 and logging in with 
     
-    User: guest
+    **User**: guest
     
-    Password: guest
+    **Password**: guest
     
 **!****!** Docker Desktop must be open and running every time you use this project.
 
@@ -65,9 +65,9 @@ Open Docker Desktop from the Start menu and wait for it to fully load (whale ico
 
 * The project requires MassTransit version 8.3.5. Run these two commands:
     
-    _dotnet add package MassTransit --version 8.3.5_
+  - dotnet add package MassTransit --version 8.3.5
     
-    _dotnet add package MassTransit.RabbitMQ --version 8.3.5_
+  - dotnet add package MassTransit.RabbitMQ --version 8.3.5
 
 **!****!** This step is required. Without it the application will fail to start with a license error.
 
@@ -76,11 +76,11 @@ Open Docker Desktop from the Start menu and wait for it to fully load (whale ico
 
 * Run these commands in order:
     
-    _dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design --version 8.0.7_
+  - dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design --version 8.0.7
     
-    _dotnet add package Microsoft.AspNetCore.Identity.UI --version 8.0.0_
+  - dotnet add package Microsoft.AspNetCore.Identity.UI --version 8.0.0
     
-    _dotnet aspnet-codegenerator identity --useDefaultUI_
+  - dotnet aspnet-codegenerator identity --useDefaultUI
 
 **!****!** This step is required. Without it the project will fail to build.
 
@@ -89,19 +89,19 @@ Open Docker Desktop from the Start menu and wait for it to fully load (whale ico
 
 * First verify the build succeeds:
     
-    _dotnet build_
+  - dotnet build
 
 * Then run the project:
     
-    _dotnet run_
+  - dotnet run
 
 * You should see these three lines in the terminal:
     
-    "Now listening on: http://localhost:5119"
+  - "Now listening on: http://localhost:5119"
     
-    "Application started. Press Ctrl+C to shut down."
+  - "Application started. Press Ctrl+C to shut down."
     
-    "Bus started: rabbitmq://localhost/"
+  - "Bus started: rabbitmq://localhost/"
 
 **!****!** If the Bus started line is missing, RabbitMQ is not running. **Go back to Step 3**.
 
@@ -121,21 +121,21 @@ Once the app is running, open the following in your browser:
 
 Open SQL Server Management Studio (SSMS) and:
 
-1. Click Connect and fill in:
+1. Click **Connect** and fill in:
     
-    * **Server name**: _(localdb)\MSSQLLocalDB_
+    - Server name: **(localdb)\MSSQLLocalDB**
     
-    * **Authentication**: _Windows Authentication_
+    - Authentication**: **Windows Authentication**
 
-2. Go to File → Open → File and open _DemoData.sql_
+2. Go to File → Open → File and open **DemoData.sql**
 
 3. In the database dropdown at the top, select:
    
-   _aspnet-CollegeScheduler-ebb7c0ad-ee39-44a7-ac1d-dafc225dea1e_
+    - aspnet-CollegeScheduler-ebb7c0ad-ee39-44a7-ac1d-dafc225dea1e
    
 4. Press F5 to execute
 
-**!****!** This database is created automatically when you first run dotnet run. Always run the app before loading the demo data.
+**!****!** This database is created automatically when you first run **dotnet run**. Always run the app before loading the demo data.
 
 The script will populate the database with:
     * Admin, Lecturer and Student users
@@ -147,7 +147,7 @@ The script will populate the database with:
 
 **Step 8 — Log In and Test**
 
-Go to **_http://localhost:5119_** and click Login. Use these credentials:
+Go to **http://localhost:5119** and click Login. Use these credentials:
 
 | Role     | Email                     | Password     |
 |----------|--------------------------|--------------|
