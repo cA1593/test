@@ -123,9 +123,9 @@ Open SQL Server Management Studio (SSMS) and:
 
 1. Click Connect and fill in:
     
-    * Server name: _(localdb)\MSSQLLocalDB_
+    * **Server name**: _(localdb)\MSSQLLocalDB_
     
-    * Authentication: _Windows Authentication_
+    * **Authentication**: _Windows Authentication_
 
 2. Go to File → Open → File and open _DemoData.sql_
 
