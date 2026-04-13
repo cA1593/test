@@ -6,14 +6,14 @@ The **College Scheduler** is a full-stack web application designed to manage aca
 
 The system replaces manual scheduling (e.g. PDFs and spreadsheets) with a structured, real-time platform that:
 
-    * Prevents timetable conflicts
-    * Automates scheduling processes
-    * Supports multiple user roles
-    * Provides real-time updates and notifications
+    - Prevents timetable conflicts
+    - Automates scheduling processes
+    - Supports multiple user roles
+    - Provides real-time updates and notifications
     
 **Key Features**
   
-    * Admin
+    - Admin
   
         - Manage campuses, buildings, rooms, and modules
         - Create and manage timetable events
@@ -22,13 +22,13 @@ The system replaces manual scheduling (e.g. PDFs and spreadsheets) with a struct
         - Generate recurring timetable events (full semester scheduling)
         - Review and manage requests (approval system)
   
-    * Lecturer
+    - Lecturer
   
         - View personal timetable
         - Submit schedule change requests
         - View request history
   
-    * Student
+    - Student
   
         - View personal timetable
         - Request room bookings
@@ -37,11 +37,11 @@ The system replaces manual scheduling (e.g. PDFs and spreadsheets) with a struct
         
 **Core Functionality** 
 
-    * Room availability search
-    * Clash detection (room, lecturer, cohort)
-    * Recurring event generation
-    * Request & approval system
-    * Notification system (structure ready)
+    - Room availability search
+    - Clash detection (room, lecturer, cohort)
+    - Recurring event generation
+    - Request & approval system
+    - Notification system (structure ready)
 
 **Architecture**
 
@@ -56,14 +56,14 @@ The backend is built as an **API-first system**, tested using Swagger before fro
 
 **Technologies Used**
 
-    * .NET 8 / ASP.NET Core
-    * Blazor Server
-    * Entity Framework Core
-    * SQL Server LocalDB
-    * ASP.NET Identity (Authentication & Roles)
-    * SignalR (Real-time updates)
-    * RabbitMQ + MassTransit (Messaging)
-    * Swagger (API testing)
+    - .NET 8 / ASP.NET Core
+    - Blazor Server
+    - Entity Framework Core
+    - SQL Server LocalDB
+    - ASP.NET Identity (Authentication & Roles)
+    - SignalR (Real-time updates)
+    - RabbitMQ + MassTransit (Messaging)
+    - Swagger (API testing)
 
 **User Roles**
 
