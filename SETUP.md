@@ -31,15 +31,15 @@ Make sure the following are installed before continuing:
 
 * Open the Windows terminal (Command Prompt) and navigate to the folder where you want to place the project:
     
-   - cd C:\Users\YourName\source\repos
+         - cd C:\Users\YourName\source\repos
 
 * Clone the repository:
     
-   - git clone https://github.com/Antonioluis74476/CollegeScheduler.git CollegeScheduler
+         - git clone https://github.com/Antonioluis74476/CollegeScheduler.git CollegeScheduler
 
 * Navigate into the project folder:
     
-   - cd CollegeScheduler\CollegeScheduler
+         - cd CollegeScheduler\CollegeScheduler
   
 **Step 3 — Start RabbitMQ**
 
@@ -47,11 +47,11 @@ Open Docker Desktop from the Start menu and wait for it to fully load (whale ico
 
 * If this is your first time running it, use this command:
     
-  - docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3-management
+        - docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3-management
 
 * Then run in the terminal:
     
-  - docker start rabbitmq
+        - docker start rabbitmq
   
 **!****!** Verify RabbitMQ is running by opening http://127.0.0.1:15672 and logging in with 
     
@@ -65,9 +65,9 @@ Open Docker Desktop from the Start menu and wait for it to fully load (whale ico
 
 * The project requires MassTransit version 8.3.5. Run these two commands:
     
-  - dotnet add package MassTransit --version 8.3.5
+        - dotnet add package MassTransit --version 8.3.5
     
-  - dotnet add package MassTransit.RabbitMQ --version 8.3.5
+        - dotnet add package MassTransit.RabbitMQ --version 8.3.5
 
 **!****!** This step is required. Without it the application will fail to start with a license error.
 
@@ -76,11 +76,11 @@ Open Docker Desktop from the Start menu and wait for it to fully load (whale ico
 
 * Run these commands in order:
     
-  - dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design --version 8.0.7
+        - dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design --version 8.0.7
     
-  - dotnet add package Microsoft.AspNetCore.Identity.UI --version 8.0.0
+        - dotnet add package Microsoft.AspNetCore.Identity.UI --version 8.0.0
     
-  - dotnet aspnet-codegenerator identity --useDefaultUI
+        - dotnet aspnet-codegenerator identity --useDefaultUI
 
 **!****!** This step is required. Without it the project will fail to build.
 
@@ -89,11 +89,11 @@ Open Docker Desktop from the Start menu and wait for it to fully load (whale ico
 
 * First verify the build succeeds:
     
-  - dotnet build
+         - dotnet build
 
 * Then run the project:
     
-  - dotnet run
+        - dotnet run
 
 * You should see these three lines in the terminal:
     
