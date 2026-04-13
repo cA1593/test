@@ -15,6 +15,7 @@ This guide walks you through setting up and running the College Scheduler backen
 
 
 **Step 1 — Prerequisites**
+
 Make sure the following are installed before continuing:
 
 * Visual Studio 2022 (with ASP.NET and web development workload)
@@ -27,6 +28,7 @@ Make sure the following are installed before continuing:
 
 
 **Step 2 — Clone the Repository**
+
 * Open the Windows terminal (Command Prompt) and navigate to the folder where you want to place the project:
     _cd C:\Users\YourName\source\repos_
 
@@ -37,6 +39,7 @@ Make sure the following are installed before continuing:
     _cd CollegeScheduler\CollegeScheduler_
   
 **Step 3 — Start RabbitMQ**
+
 Open Docker Desktop from the Start menu and wait for it to fully load (whale icon appears in the taskbar).
 
 * If this is your first time running it, use this command:
@@ -52,6 +55,7 @@ Open Docker Desktop from the Start menu and wait for it to fully load (whale ico
 **!** Docker Desktop must be open and running every time you use this project.
 
 **Step 4 — Fix MassTransit Package Version**
+
 * The project requires MassTransit version 8.3.5. Run these two commands:
     _dotnet add package MassTransit --version 8.3.5_
     _dotnet add package MassTransit.RabbitMQ --version 8.3.5_
@@ -60,6 +64,7 @@ Open Docker Desktop from the Start menu and wait for it to fully load (whale ico
 
 
 **Step 5 — Scaffold Identity Pages**
+
 * Run these commands in order:
     _dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design --version 8.0.7_
     _dotnet add package Microsoft.AspNetCore.Identity.UI --version 8.0.0_
@@ -69,6 +74,7 @@ Open Docker Desktop from the Start menu and wait for it to fully load (whale ico
 
 
 **Step 6 — Build and Run**
+
 * First verify the build succeeds:
     _dotnet build_
 
@@ -95,6 +101,7 @@ Once the app is running, open the following in your browser:
 
 
 **Step 7 — Load Demo Data**
+
 Open SQL Server Management Studio (SSMS) and:
 
 1. Click Connect and fill in:
@@ -119,6 +126,7 @@ The script will populate the database with:
 
 
 **Step 8 — Log In and Test**
+
 Go to _http://localhost:5119_ and click Login. Use these credentials:
 
 | Role     | Email                     | Password     |
@@ -128,12 +136,14 @@ Go to _http://localhost:5119_ and click Login. Use these credentials:
 | Student  | studenttest@college.ie   | Student.123  |
 
 **Important — Blazor UI (Frontend)**
+
 The frontend interface at _http://localhost:5119_ is a basic Blazor UI used only for testing user login with the three roles.
 All actual functionality — timetable management, scheduling, room bookings, clash detection, notifications, and real-time updates — is accessed and tested through Swagger at _http://localhost:5119/swagger_.
 The Blazor UI does not expose the full system features and should not be used to evaluate the backend functionality.
 
 
 **Troubleshooting**
+
   * App fails with a license error on startup MassTransit version is wrong. Repeat Step 4.
   * App fails to build with a Pages namespace error Identity pages are missing. Repeat Step 5.
   * Unable to connect to web server 'https' Run these commands to fix the SSL certificate:
